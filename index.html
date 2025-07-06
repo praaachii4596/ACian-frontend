@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACian | Expert AC Installation Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- WhatsApp & Chat Float -->
+    <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="chatbot-float cursor-pointer" onclick="openChat()">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Chat Modal -->
+    <div
+      id="chatModal"
+      class="hidden fixed bottom-32 right-32 w-80 bg-white rounded-lg shadow-xl z-50 border border-gray-200"
+    >
+      <div
+        class="bg-violet-500 text-white p-3 rounded-t-lg flex justify-between items-center"
+      >
+        <h3 class="font-semibold">Chat with us</h3>
+        <button onclick="closeChat()" class="text-white focus:outline-none">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="p-4 h-64 overflow-y-auto">
+        <div class="mb-4">
+          <p class="text-sm text-gray-600">
+            Hi there! How can we help you today?
+          </p>
+        </div>
+      </div>
+      <div class="p-3 border-t border-gray-200">
+        <div class="flex">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            class="flex-1 border border-gray-300 rounded-l-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-700"
+          />
+          <button
+            class="bg-violet-500 text-white px-4 py-2 rounded-r-lg hover:bg-violet-950"
+          >
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="bg-gray shadow-lg sticky top-0 z-40 bg-slate-200 opacity-90 backdrop-blur-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex-shrink-0">
+              <div class="flex items-center">
+                <img src="logo.png" alt="Logo" class="h-10 w-auto mr-2" />
+                <span class="text-3xl font-bold text-violet-950">ACian</span>
+              </div>
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#home"
+                class="text-black-600 hover:text-violet-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#services"
+                class="text-black-600 hover:text-violet-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#why-us"
+                class="text-black-600 hover:text-violet-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Why Us</a
+              >
+              <a
+                href="#process"
+                class="text-black-600 hover:text-violet-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Process</a
+              >
+              <a
+                href="#contact"
+                class="text-black-600 hover:text-violet-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <a
+              href="#contact"
+              class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-violet-700 hover:bg-violet-950"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-violet-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-800"
+            >
+              <span class="sr-only">Open main menu</span>
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="text-violet-400 block px-3 py-2 rounded-md text-base font-medium"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="text-gray-700 hover:text-violet-400 block px-3 py-2 rounded-md text-base font-medium"
+            >Services</a
+          >
+          <a
+            href="#why-us"
+            class="text-gray-700 hover:text-violet-400 block px-3 py-2 rounded-md text-base font-medium"
+            >Why Us</a
+          >
+          <a
+            href="#process"
+            class="text-gray-700 hover:text-violet-400 block px-3 py-2 rounded-md text-base font-medium"
+            >Process</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-violet-400 block px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-200">
+          <div class="flex items-center px-5">
+            <a
+              href="#contact"
+              class="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-violet-400 hover:bg-violet-950"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main Section -->
+    <section class="main-section text-white py-20 md:py-32 relative">
+      <!-- Background Image -->
+      <div class="absolute top-0 left-0 w-full h-full z-0">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1682126009570-3fe2399162f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="AC Installation"
+          class="w-full h-full object-cover opacity-50"
+        />
+      </div>
+
+      <!-- Overlay Content -->
+      <div
+        id="home"
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+      >
+        <div class="md:w-2/3 lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Expert AC Installation in Gurgaon – Fast, Reliable & Affordable!
+          </h1>
+          <p class="text-xl mb-8">
+            Professional installation by certified technicians. Book online in
+            60 seconds!
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact"
+              class="bg-violet-700 hover:bg-violet-950 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300"
+            >
+              <i class="fas fa-calendar-check mr-2"></i> Book Now
+            </a>
+            <a
+              href="tel:+919999999999"
+              class="bg-white hover:bg-gray-100 text-violet-700 font-bold py-3 px-6 rounded-lg text-center transition duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> Call: +91 99999 99999
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Who is the <span class="text-violet-700">Best</span> for your
+            Cooling Air?<br /><span class="text-violet-700">Of Course, US</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We provide professional installation services for all types of air
+            conditioners across Gurgaon
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-wind"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Split AC Installation</h3>
+            <p class="text-gray-600">
+              Professional installation of split AC units with proper mounting,
+              piping, and electrical connections.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-window-maximize"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Window AC Installation</h3>
+            <p class="text-gray-600">
+              Expert installation of window AC units with secure mounting and
+              proper sealing.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Cassette & Tower AC Installation
+            </h3>
+            <p class="text-gray-600">
+              Specialized installation for commercial-grade cassette and tower
+              AC units.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Inverter AC Setup</h3>
+            <p class="text-gray-600">
+              Proper installation and configuration of energy-efficient inverter
+              AC systems.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Corporate/Bulk Installations
+            </h3>
+            <p class="text-gray-600">
+              Complete AC installation solutions for offices, shops, and
+              commercial spaces.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300"
+          >
+            <div class="text-violet-500 text-4xl mb-4">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Maintenance & Repair</h3>
+            <p class="text-gray-600">
+              Comprehensive maintenance and repair services to keep your AC
+              running efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="flex items-center">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-user-check text-violet-500"></i>
+              </div>
+              <span class="font-medium">Certified & Trained Technicians</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-cog text-violet-500"></i>
+              </div>
+              <span class="font-medium">Genuine Parts & Tools</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-clock text-violet-500"></i>
+              </div>
+              <span class="font-medium">24/7 Emergency Service</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-search-dollar text-violet-500"></i>
+              </div>
+              <span class="font-medium">Free Site Inspection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 bg-indigo-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Why We're the Best in Gurgaon
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We go above and beyond to ensure your complete satisfaction
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Reason 1 -->
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-clock text-violet-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast & On-Time Service</h3>
+            <p class="text-gray-600">
+              We value your time. Our technicians arrive on schedule and
+              complete installations efficiently.
+            </p>
+          </div>
+
+          <!-- Reason 2 -->
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-rupee-sign text-violet-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Transparent Pricing</h3>
+            <p class="text-gray-600">
+              No hidden charges or last-minute surprises. We provide clear
+              quotes upfront.
+            </p>
+          </div>
+
+          <!-- Reason 3 -->
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-shield-alt text-violet-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Warranty Protection</h3>
+            <p class="text-gray-600">
+              1-year service warranty on all installations for your peace of
+              mind.
+            </p>
+          </div>
+
+          <!-- Reason 4 -->
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-star text-violet-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Customer Satisfaction</h3>
+            <p class="text-gray-600">
+              Rated 4.9/5 by our customers for quality service and professional
+              approach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-semibold text-center mb-8">
+            What Our Customers Say
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="testimonial-card bg-white p-6 rounded-lg shadow-md border border-gray-100"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-user text-violet-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Rahul Sharma</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "The technician arrived right on time and installed my split AC
+                perfectly. Very professional service and reasonable pricing.
+                Highly recommended!"
+              </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="testimonial-card bg-white p-6 rounded-lg shadow-md border border-gray-100"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-user text-violet-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Priya Malhotra</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "I needed urgent AC installation for my office. ACian responded
+                immediately and completed the job the same day. Excellent
+                service!"
+              </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="testimonial-card bg-white p-6 rounded-lg shadow-md border border-gray-100"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-user text-violet-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Vikram Singh</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-sstar"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "The technician was very knowledgeable and explained everything
+                clearly. The installation was neat and tidy. Will definitely use
+                their services again."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand Logos -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-semibold text-center mb-8">
+            Trusted by Leading Brands
+          </h3>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center"
+          >
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fas fa-building text-4xl text-gray-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Easy Booking in 3 Steps
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Getting your AC installed has never been easier
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div
+              class="bg-violet-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Request Online</h3>
+            <p class="text-gray-600 mb-4">
+              Fill our quick booking form or give us a call to schedule your
+              installation
+            </p>
+            <div class="text-violet-500 text-3xl">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div
+              class="bg-violet-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Get Confirmation</h3>
+            <p class="text-gray-600 mb-4">
+              We'll assign a certified technician within 30 minutes and confirm
+              your appointment
+            </p>
+            <div class="text-violet-500 text-3xl">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div
+              class="bg-violet-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Professional Installation
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Our technician arrives on time with all equipment and completes
+              the installation professionally
+            </p>
+            <div class="text-violet-500 text-3xl">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-12 text-center">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-violet-700 hover:bg-violet-950"
+          >
+            <i class="fas fa-calendar-check mr-2"></i> Book Your Installation
+            Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-indigo-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Find answers to common questions about our AC installation services
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ 1 -->
+          <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-between items-center"
+            >
+              <span class="font-medium"
+                >How much does AC installation cost in Gurgaon?</span
+              >
+              <i
+                class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-answer px-6 py-4 hidden">
+              <p class="text-gray-600">
+                Installation costs vary depending on the type of AC (split,
+                window, cassette), brand, and complexity of installation. Our
+                basic split AC installation starts at ₹1,500. We provide free
+                site inspection and exact quotes before starting any work.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-between items-center"
+            >
+              <span class="font-medium"
+                >How long does AC installation take?</span
+              >
+              <i
+                class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-answer px-6 py-4 hidden">
+              <p class="text-gray-600">
+                A standard split AC installation typically takes 2-3 hours.
+                Window AC installations are usually completed within 1-2 hours.
+                More complex installations (like cassette or tower ACs) may take
+                longer depending on the requirements.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-between items-center"
+            >
+              <span class="font-medium"
+                >Do I need to purchase any additional materials?</span
+              >
+              <i
+                class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-answer px-6 py-4 hidden">
+              <p class="text-gray-600">
+                Our installation charges include all standard materials
+                (mounting brackets, piping, insulation, etc.). If any special
+                materials are required, we'll inform you in advance and get your
+                approval before proceeding.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-between items-center"
+            >
+              <span class="font-medium"
+                >What areas in Gurgaon do you serve?</span
+              >
+              <i
+                class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-answer px-6 py-4 hidden">
+              <p class="text-gray-600">
+                We cover all areas of Gurgaon including DLF phases, Sectors
+                14-57, Cyber City, Sohna Road, MG Road, Golf Course Road, and
+                surrounding areas. Contact us to confirm service availability in
+                your specific location.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-between items-center"
+            >
+              <span class="font-medium"
+                >Do you provide warranty on installations?</span
+              >
+              <i
+                class="fas fa-chevron-down transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-answer px-6 py-4 hidden">
+              <p class="text-gray-600">
+                Yes, we provide a 1-year service warranty on all our
+                installations. This covers any issues arising from the
+                installation process. Manufacturer warranty on the AC unit
+                itself remains unaffected by our installation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-violet-400 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p class="text-xl max-w-3xl mx-auto">
+            Contact us today for professional AC installation services in
+            Gurgaon
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-white rounded-lg shadow-xl p-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              Book Your Installation
+            </h3>
+            <script src="https://sheetdb.io/s/f/dnc6r8hzjakus.js"></script>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <div class="mb-8">
+              <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="bg-violet-800 p-3 rounded-full mr-4">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Phone</h4>
+                    <p class="text-blue-100">+91 99999 99999</p>
+                    <p class="text-blue-100">+91 88888 88888</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-violet-800 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Email</h4>
+                    <p class="text-blue-100">support@acian7753.com</p>
+                    <p class="text-blue-100">bookings@acian7753.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-violet-800 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Service Areas</h4>
+                    <p class="text-blue-100">
+                      All of Gurgaon including DLF phases, Sectors 14-57, Cyber
+                      City, Sohna Road, MG Road, Golf Course Road, and
+                      surrounding areas
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-violet-800 p-3 rounded-full mr-4">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Working Hours</h4>
+                    <p class="text-blue-100">
+                      Monday to Sunday: 8:00 AM - 9:00 PM
+                    </p>
+                    <p class="text-blue-100">
+                      Emergency services available 24/7
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-violet-800 hover:bg-violet-800 w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-violet-800 hover:bg-violet-800 w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-violet-800 hover:bg-violet-800 w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-violet-800 hover:bg-violet-800 w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="" class="py-0 bg-violet-400"></section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About -->
+          <div>
+            <div class="flex items-center mb-4">
+              <img src="logo.png" alt="Logo" class="h-10 w-auto mr-2" />
+              <span class="text-xl font-bold">ACian</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Professional AC installation services in Gurgaon. Fast, reliable,
+              and affordable solutions for homes and businesses.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#services" class="text-gray-400 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#why-us" class="text-gray-400 hover:text-white"
+                  >Why Choose Us</a
+                >
+              </li>
+              <li>
+                <a href="#process" class="text-gray-400 hover:text-white"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Split AC Installation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Window AC Installation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Cassette AC Installation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Inverter AC Setup</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Corporate Installations</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-violet-800 mt-1 mr-2"></i>
+                <span class="text-gray-400"
+                  >123 Tech Street, Cyber City, Gurgaon, Haryana 122002</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-violet-800 mr-2"></i>
+                <span class="text-gray-400">+91 99999 99999</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-violet-800 mr-2"></i>
+                <span class="text-gray-400">support@acian7753.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 ACian. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white text-sm"
+              >Sitemap</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // FAQ toggle
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector("i");
+
+          answer.classList.toggle("hidden");
+          icon.classList.toggle("transform");
+          icon.classList.toggle("rotate-180");
+        });
+      });
+
+      // Form submission
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you for your booking request! We will contact you shortly to confirm your appointment."
+          );
+          this.reset();
+        });
+
+      // Chat functions
+      function openChat() {
+        document.getElementById("chatModal").classList.remove("hidden");
+      }
+
+      function closeChat() {
+        document.getElementById("chatModal").classList.add("hidden");
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
